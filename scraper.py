@@ -30,4 +30,4 @@ def log_error(error):
 
 def pull_text(html):
     other_content = html.find('h1', attrs={'class': 'mb-2 display-3'})
-    print(other_content.text)
+    return other_content

@@ -6,7 +6,7 @@ def main():
     test_url = 'https://realpython.com/blog/'
     raw_html = scraper.get_raw_html(test_url)
     html = BeautifulSoup(raw_html, 'html.parser')
-    scraper.pull_text(html)
+    return scraper.pull_text(html)
 
 
 if __name__ == "__main__":
