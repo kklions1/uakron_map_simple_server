@@ -11,7 +11,7 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
         self.wfile.write(b'Hello, World!')
 
 
-def main():
+def mainm():
     httpd = HTTPServer(('localhost', 4443), BaseHTTPRequestHandler)
     httpd.socket = ssl.wrap_socket(httpd.socket,
                                    keyfile='',
