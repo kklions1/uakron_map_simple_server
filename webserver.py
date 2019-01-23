@@ -18,7 +18,9 @@ class SimpleHTTPServerRequestHandler(BaseHTTPRequestHandler):
         html = BeautifulSoup(raw_html, 'html.parser')
         message = str(scraper.pull_text(html))
 
-        self.wfile.write(bytes(message, "utf8"))
+        # self.wfile.write(bytes(message, "utf8"))
+        html_message = str(html)
+        self.wfile.write(bytes(html_message, "utf8"))
         return
 
 
